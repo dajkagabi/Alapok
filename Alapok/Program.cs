@@ -208,6 +208,33 @@ namespace Alapok
             greetings("Gabriella");
 
         }
+
+        //Osztályok
+        class Car
+        {
+            public string brand;
+            public string model;
+            public int year;
+
+        //
+        public Car (string brand, string model, int year)
+            {
+                this.brand = brand;
+                this.model = model;
+                this.year = year;
+            }
+
+        
+
+        public void DispalyDetails()
+            {
+                Console.WriteLine($"Márka: {brand}, Model: {model}, Year: {year},");
+            }
+
+            
+            
+
+        }
       
     }
 }
