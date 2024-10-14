@@ -161,8 +161,28 @@ namespace Alapok
             {
                 Console.WriteLine(gyumolcs);
             }
-            
+
+            //Random
+            Random random = new Random();
+            int vszm = random.Next(0, 50);
+            Console.WriteLine($"Random szám: {vszm}");
+
+
+
+            int[] numbers = new int[10];
+            Random random1 = new Random();
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = random.Next(1, 101);
+            }
+            foreach (int number in numbers)
+            {
+                Console.WriteLine(number);
+            }
+
+
+
         }
       
-        }
     }
+}
