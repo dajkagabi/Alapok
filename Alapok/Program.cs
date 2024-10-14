@@ -79,6 +79,33 @@ namespace Alapok
                 Console.WriteLine("A felhasználó nem jogosult kedvezményre.");
             }
 
+            
+            int day = 4;
+            switch (day)
+            {
+                case 1:
+                    Console.WriteLine("Hétfő");
+                    break;
+                case 2:
+                    Console.WriteLine("Kedd");
+                    break;
+                case 3:
+                    Console.WriteLine("Szerda");
+                    break;
+                case 4:
+                    Console.WriteLine("Csütörtök");
+                    break;
+                case 5:
+                    Console.WriteLine("Péntek");
+                    break;
+                case 6:
+                    Console.WriteLine("Szombat");
+                    break;
+                case 7:
+                    Console.WriteLine("Vasárnap");
+                    break;
+            }
+
             //Ciklusok
 
             for (int i = 0; i < 5; i++)
@@ -86,7 +113,7 @@ namespace Alapok
                 Console.WriteLine($"A for ciklus száma: {i}");
             }
 
-            //Addig fut amíg a feltétel igaz
+            //Elől tesztelő, ha minden egyes feltétel teljesül.
 
             int t = 1;
 
@@ -96,8 +123,46 @@ namespace Alapok
                 t++;
             }
 
+            //Hátul tesztelő, ciklusmag végrehajtása után megy végbe.
+            int z = 0;
+            do
+            {
+                Console.WriteLine($"A do-while ciklus: {z}");
+                z++;
+            }while (z < 5);
 
-
+            //Miden elemén egyszer végrehajtódik.
+            string[] cars = { "Opel", "Skoda", "Audi", "Lada" };
+            foreach (string car in cars)
+            {
+                Console.WriteLine(car);
             }
+
+            //Tömbök
+            string[] autok = { "Volvo", "Ford", "Mazda", "Mustang", "Audi",  };
+
+            Console.WriteLine($"Az autó: {autok[1]}");
+            Console.WriteLine(autok.Length);
+
+            Array.Sort(autok);
+
+            Console.WriteLine("Rendezett autók:");
+            foreach (string auto in autok)
+            {
+                Console.WriteLine(auto);
+            }
+
+
+            string[] gyumolcsok = { "banán", "alma", "cseresznye", "eper" };
+        
+            Array.Sort(gyumolcsok);
+            Console.WriteLine("Rendezett gyümölcsök: ");
+            foreach(string gyumolcs in gyumolcsok)
+            {
+                Console.WriteLine(gyumolcs);
+            }
+            
+        }
+      
         }
     }
