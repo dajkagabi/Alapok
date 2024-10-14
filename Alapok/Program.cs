@@ -200,6 +200,13 @@ namespace Alapok
                 Console.WriteLine();
             }
 
+            //
+            void greetings (string myname)
+            {
+                Console.WriteLine("Hello, " + myname + "!");
+            }
+            greetings("Gabriella");
+
         }
       
     }
