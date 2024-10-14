@@ -180,7 +180,25 @@ namespace Alapok
                 Console.WriteLine(number);
             }
 
+            //Mátrix (2x2 most)
+            int[,] matrix = new int[2, 2];
 
+            matrix[0, 0] = 1;
+            matrix[0, 1] = 2;
+            matrix[1, 0] = 3;
+            matrix[1, 1] = 4;
+
+
+
+            Console.WriteLine("Kétdimenziós tömb (mátrix): ");
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    Console.WriteLine(matrix[i, j]+ " ");
+                }
+                Console.WriteLine();
+            }
 
         }
       
