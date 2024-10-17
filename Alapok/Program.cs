@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +10,8 @@ namespace Alapok
 {
     internal class Program
     {
+        
+
         static void Main(string[] args)
         {
             int age = 25;
@@ -57,7 +60,7 @@ namespace Alapok
 
             if (myage < 18)
             {
-                Console.WriteLine("Gyermek");
+                Console.WriteLine("Fiatal");
             }
             else if (myage < 65 )
             {
@@ -131,7 +134,7 @@ namespace Alapok
                 z++;
             }while (z < 5);
 
-            //Miden elemén egyszer végrehajtódik.
+            //Miden elemen egyszer végrehajtódik.
             string[] cars = { "Opel", "Skoda", "Audi", "Lada" };
             foreach (string car in cars)
             {
@@ -169,11 +172,11 @@ namespace Alapok
 
 
 
-            int[] numbers = new int[10];
+            int[] numbers = new int[5];
             Random random1 = new Random();
             for (int i = 0; i < numbers.Length; i++)
             {
-                numbers[i] = random.Next(1, 101);
+                numbers[i] = random.Next(1, 99);
             }
             foreach (int number in numbers)
             {
@@ -210,5 +213,5 @@ namespace Alapok
             }
            
         }
-      
     }
+
