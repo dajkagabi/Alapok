@@ -154,6 +154,26 @@ namespace Alapok
             {
                 Console.WriteLine(car);
             }
+            
+
+            //Lista
+            List<string> fruits = new List<string>();
+            
+
+            // Elemek hozzáadása a listához
+            fruits.Add("Apple");
+            fruits.Add("Banana");
+            fruits.Add("Cherry");
+
+            // Lista kiíratása
+            foreach (string fruit in fruits)
+            {
+                Console.WriteLine(fruit);
+            }
+
+
+
+
 
             //Tömbök
             string[] autok = { "Volvo", "Ford", "Mazda", "Mustang", "Audi", };
