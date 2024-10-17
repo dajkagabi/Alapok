@@ -10,9 +10,11 @@ namespace Alapok
 {
     internal class Program
     {
-        
+
 
         static void Main(string[] args)
+
+
         {
             int age = 25;
             double price = 19.99;
@@ -62,7 +64,7 @@ namespace Alapok
             {
                 Console.WriteLine("Fiatal");
             }
-            else if (myage < 65 )
+            else if (myage < 65)
             {
                 Console.WriteLine("Középkorú");
             }
@@ -73,7 +75,7 @@ namespace Alapok
 
             //Kedvezmény jár-e a felhasználónak?
             int kor = 12;
-            if (kor < 14 ||  kor >= 65)
+            if (kor < 14 || kor >= 65)
             {
                 Console.WriteLine("A felhasználó jogosult kedvezményre.");
             }
@@ -82,7 +84,7 @@ namespace Alapok
                 Console.WriteLine("A felhasználó nem jogosult kedvezményre.");
             }
 
-            
+
             int day = 4;
             switch (day)
             {
@@ -132,7 +134,7 @@ namespace Alapok
             {
                 Console.WriteLine($"A do-while ciklus: {z}");
                 z++;
-            }while (z < 5);
+            } while (z < 5);
 
             //Miden elemen egyszer végrehajtódik.
             string[] cars = { "Opel", "Skoda", "Audi", "Lada" };
@@ -141,8 +143,13 @@ namespace Alapok
                 Console.WriteLine(car);
             }
 
+            
+
+
+
+
             //Tömbök
-            string[] autok = { "Volvo", "Ford", "Mazda", "Mustang", "Audi",  };
+            string[] autok = { "Volvo", "Ford", "Mazda", "Mustang", "Audi", };
 
             Console.WriteLine($"Az autó: {autok[1]}");
             Console.WriteLine(autok.Length);
@@ -157,10 +164,10 @@ namespace Alapok
 
 
             string[] gyumolcsok = { "banán", "alma", "cseresznye", "eper" };
-        
+
             Array.Sort(gyumolcsok);
             Console.WriteLine("Rendezett gyümölcsök: ");
-            foreach(string gyumolcs in gyumolcsok)
+            foreach (string gyumolcs in gyumolcsok)
             {
                 Console.WriteLine(gyumolcs);
             }
@@ -198,20 +205,30 @@ namespace Alapok
             {
                 for (int j = 0; j < 2; j++)
                 {
-                    Console.WriteLine(matrix[i, j]+ " ");
+                    Console.WriteLine(matrix[i, j] + " ");
                 }
                 Console.WriteLine();
             }
 
             //függvényy
-            void greetings (string myname)
+            void greetings(string myname)
             {
                 Console.WriteLine("Hello, " + myname + "!");
             }
             greetings("Gabriella");
 
-            }
-           
+
+
+            //Osztály
+            // Car példányok létrehozása
+            Car car1 = new Car("Corolla", "Toyota", 2020);
+            Car car2 = new Car("Civic", "Honda", 2019);
+
+            // Autók információinak kiírása
+            car1.Info();
+            car2.Info();
+
+        }
         }
     }
 
