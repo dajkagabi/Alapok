@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -237,27 +238,59 @@ namespace Alapok
 
             string filepath = "example.txt";
 
-            using (StreamWriter writer = new StreamWriter(filepath))
+            try
             {
-                writer.WriteLine("Hello C#");
-                writer.WriteLine("Hello C#");
-                writer.WriteLine("Hello C#");
-            }
-            Console.WriteLine($"A fájl írása befejeződött: {filepath}");
-
-            //Olvasás a fájlból
-            using (StreamReader reader = new StreamReader(filepath))
-            {
-                string line;
-                Console.WriteLine("A fájl tartalma: ");
-                while((line = reader.ReadLine()) != null)
+                using (StreamWriter writer = new StreamWriter(filepath))
                 {
-                    Console.WriteLine(line);
+                    writer.WriteLine("Hello C#");
+                    writer.WriteLine("Hello C#");
+                    writer.WriteLine("Hello C#");
+                }
+                Console.WriteLine($"A fájl írása befejeződött: {filepath}");
+            }
+            catch (IOException ioEx)
+            {
+                Console.WriteLine("Hiba történt a fájl írása során:");
+                Console.WriteLine(ioEx.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Egy váratlan hiba történt:");
+                Console.WriteLine(ex.Message);
+            }
+
+
+
+
+            // Olvasás a fájlból
+            try
+            {
+                using (StreamReader reader = new StreamReader(filepath))
+                {
+                    string line;
+                    Console.WriteLine("A fájl tartalma: ");
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        Console.WriteLine(line);
+                    }
                 }
             }
-
-        }
-            
+            catch (FileNotFoundException fnfEx)
+            {
+                Console.WriteLine("A fájl nem található:");
+                Console.WriteLine(fnfEx.Message);
+            }
+            catch (IOException ioEx)
+            {
+                Console.WriteLine("Hiba történt a fájl olvasása során:");
+                Console.WriteLine(ioEx.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Egy váratlan hiba történt:");
+                Console.WriteLine(ex.Message);
+            }
         }
     }
+}
 
