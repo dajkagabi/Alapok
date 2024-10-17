@@ -234,8 +234,7 @@ namespace Alapok
             car1.Info();
             car2.Info();
 
-            //Fájl írás:
-
+            // Fájl írása
             string filepath = "example.txt";
 
             try
@@ -258,9 +257,6 @@ namespace Alapok
                 Console.WriteLine("Egy váratlan hiba történt:");
                 Console.WriteLine(ex.Message);
             }
-
-
-
 
             // Olvasás a fájlból
             try
@@ -293,4 +289,3 @@ namespace Alapok
         }
     }
 }
-
