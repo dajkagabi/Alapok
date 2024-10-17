@@ -164,6 +164,8 @@ namespace Alapok
             fruits.Add("Apple");
             fruits.Add("Banana");
             fruits.Add("Cherry");
+            fruits.Add("Kiwi");
+            fruits.Add("Lemon");
 
             // Lista kiíratása
             foreach (string fruit in fruits)
@@ -173,9 +175,11 @@ namespace Alapok
 
             // Lista elemének eltávolítása
             fruits.Remove("Banán");
+            
 
             // Lista frissített elemeinek kiírása
             Console.WriteLine("\nA lista frissítése után:");
+            fruits.Sort();
             foreach (string fruit in fruits)
             {
                 Console.WriteLine(fruit);
@@ -183,12 +187,14 @@ namespace Alapok
 
             // Lista méretének kiírása
             Console.WriteLine($"\nA lista mérete: {fruits.Count}\n");
-        
+
+           
+
+          
 
 
-
-        //Tömbök
-        string[] autok = { "Volvo", "Ford", "Mazda", "Mustang", "Audi", };
+            //Tömbök
+            string[] autok = { "Volvo", "Ford", "Mazda", "Mustang", "Audi", };
 
             Console.WriteLine($"Az autó: {autok[1]}\n");
             
