@@ -149,7 +149,7 @@ namespace Alapok
             } while (z < 5);
 
             //Miden elemen egyszer végrehajtódik.
-            string[] cars = { "Opel", "Skoda", "Audi", "Lada" };
+            string[] cars = { "Opel", "Skoda", "Audi", "Lada \n"};
             foreach (string car in cars)
             {
                 Console.WriteLine(car);
@@ -171,26 +171,39 @@ namespace Alapok
                 Console.WriteLine(fruit);
             }
 
+            // Lista elemének eltávolítása
+            fruits.Remove("Banán");
+
+            // Lista frissített elemeinek kiírása
+            Console.WriteLine("\nA lista frissítése után:");
+            foreach (string fruit in fruits)
+            {
+                Console.WriteLine(fruit);
+            }
+
+            // Lista méretének kiírása
+            Console.WriteLine($"\nA lista mérete: {fruits.Count}\n");
+        
 
 
 
+        //Tömbök
+        string[] autok = { "Volvo", "Ford", "Mazda", "Mustang", "Audi", };
 
-            //Tömbök
-            string[] autok = { "Volvo", "Ford", "Mazda", "Mustang", "Audi", };
-
-            Console.WriteLine($"Az autó: {autok[1]}");
-            Console.WriteLine(autok.Length);
+            Console.WriteLine($"Az autó: {autok[1]}\n");
+            
+            Console.WriteLine($"Autók mennyisége: {autok.Length} \n");
 
             Array.Sort(autok);
 
             Console.WriteLine("Rendezett autók:");
             foreach (string auto in autok)
             {
-                Console.WriteLine(auto);
+                Console.WriteLine($" {auto} \n");
             }
 
 
-            string[] gyumolcsok = { "banán", "alma", "cseresznye", "eper" };
+            string[] gyumolcsok = { "banán", "alma", "cseresznye", "eper \n" };
 
             Array.Sort(gyumolcsok);
             Console.WriteLine("Rendezett gyümölcsök: ");
@@ -202,7 +215,7 @@ namespace Alapok
             //Random
             Random random = new Random();
             int vszm = random.Next(0, 50);
-            Console.WriteLine($"Random szám: {vszm}");
+            Console.WriteLine($"Random szám: {vszm} \n");
 
 
 
@@ -214,7 +227,7 @@ namespace Alapok
             }
             foreach (int number in numbers)
             {
-                Console.WriteLine(number);
+                Console.WriteLine($"{number}\n");
             }
 
             //Mátrix (2x2 most)
