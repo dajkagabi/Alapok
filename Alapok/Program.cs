@@ -1,6 +1,8 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Bibliography;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -38,6 +40,9 @@ namespace Alapok
             Console.Write("Kérlek, írd be a neved:  ");
             string names = Console.ReadLine();
             Console.WriteLine($"Szia, {names}!");
+
+            Console.WriteLine("Adj meg egy számot: ");
+            int szam = Convert.ToInt32(Console.ReadLine());
 
 
             //Feltételes
@@ -113,6 +118,16 @@ namespace Alapok
             {
                 Console.WriteLine($"A for ciklus száma: {i}");
             }
+
+            //For ciklus szöveg
+            Console.WriteLine("Adj meg egy szöveget: ");
+            string szoveg = Console.ReadLine();
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine($"{i + 1}.{szoveg}");
+            }
+
 
             //Elől tesztelő, a feltétel ellenőrzése előtt hajtódik végre. Ha a feltétel hamis, nem fut le a ciklus.
 
@@ -208,9 +223,8 @@ namespace Alapok
             }
             greetings("Gabriella");
 
-
-
             //Osztály
+
             // Car példányok létrehozása
             Car car1 = new Car("Corolla", "Toyota", 2020);
             Car car2 = new Car("Civic", "Honda", 2019);
@@ -219,7 +233,31 @@ namespace Alapok
             car1.Info();
             car2.Info();
 
+            //Fájl írás:
+
+            string filepath = "example.txt";
+
+            using (StreamWriter writer = new StreamWriter(filepath))
+            {
+                writer.WriteLine("Hello C#");
+                writer.WriteLine("Hello C#");
+                writer.WriteLine("Hello C#");
             }
+            Console.WriteLine($"A fájl írása befejeződött: {filepath}");
+
+            //Olvasás a fájlból
+            using (StreamReader reader = new StreamReader(filepath))
+            {
+                string line;
+                Console.WriteLine("A fájl tartalma: ");
+                while((line = reader.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                }
+            }
+
+        }
+            
         }
     }
 
