@@ -10,11 +10,7 @@ namespace Alapok
 {
     internal class Program
     {
-
-
         static void Main(string[] args)
-
-
         {
             int age = 25;
             double price = 19.99;
@@ -118,7 +114,7 @@ namespace Alapok
                 Console.WriteLine($"A for ciklus száma: {i}");
             }
 
-            //Elől tesztelő, ha minden egyes feltétel teljesül.
+            //Elől tesztelő, a feltétel ellenőrzése előtt hajtódik végre. Ha a feltétel hamis, nem fut le a ciklus.
 
             int t = 1;
 
@@ -128,7 +124,7 @@ namespace Alapok
                 t++;
             }
 
-            //Hátul tesztelő, ciklusmag végrehajtása után megy végbe.
+            //A feltétel ellenőrzése után hajtódik végre. A ciklus legalább egyszer mindig végrehajtódik, függetlenül a feltétel állapotától.
             int z = 0;
             do
             {
@@ -142,11 +138,6 @@ namespace Alapok
             {
                 Console.WriteLine(car);
             }
-
-            
-
-
-
 
             //Tömbök
             string[] autok = { "Volvo", "Ford", "Mazda", "Mustang", "Audi", };
@@ -228,7 +219,7 @@ namespace Alapok
             car1.Info();
             car2.Info();
 
-        }
+            }
         }
     }
 
