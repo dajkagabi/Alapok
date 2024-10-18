@@ -322,28 +322,29 @@ namespace Alapok
             }
 
             // Stringek
-            string szovegek = "Lorem Ipsum" + ",";  
-            Console.WriteLine(szovegek.ToUpper());                    
-            Console.WriteLine(szovegek.ToLower());                    
-            Console.WriteLine(szovegek.Length);                       
-            Console.WriteLine(szovegek.Replace('e', 'a'));            
+            string szovegek = "Lorem Ipsum" + ",";
+            Console.WriteLine(szovegek.ToUpper());
+            Console.WriteLine(szovegek.ToLower());
+            Console.WriteLine(szovegek.Length);
+            Console.WriteLine(szovegek.Replace('e', 'ű'));
             Console.WriteLine(szovegek.Trim(','));
 
             Console.WriteLine(string.Join(", ", szovegek.Split(',')));
+
             /*
-             var reszletek = szovegek.Split(',');
+            var reszletek = szovegek.Split(',');
             foreach (var resz in reszletek)
             {
-                 Console.WriteLine(resz);
+                Console.WriteLine(resz);
             }
-             
-             */
+            */
 
-            Console.WriteLine(szovegek.Contains("ha"));               
-            Console.WriteLine(szovegek.StartsWith("Lorem"));           
-            Console.WriteLine(szovegek.EndsWith(","));                 
-            Console.WriteLine(szovegek.IndexOf("rem"));                
-            Console.WriteLine(szovegek.Equals("Lorem Ipsum,"));        
+            Console.WriteLine(szovegek.Contains("ha"));
+            Console.WriteLine(szovegek.StartsWith("Lorem"));
+            Console.WriteLine(szovegek.EndsWith(","));
+            Console.WriteLine(szovegek.IndexOf("rem"));
+            Console.WriteLine(szovegek.Equals("Lorem Ipsum,"));
+
 
 
 
