@@ -149,16 +149,16 @@ namespace Alapok
             } while (z < 5);
 
             //Miden elemen egyszer végrehajtódik.
-            string[] cars = { "Opel", "Skoda", "Audi", "Lada \n"};
+            string[] cars = { "Opel", "Skoda", "Audi", "Lada \n" };
             foreach (string car in cars)
             {
                 Console.WriteLine(car);
             }
-            
+
 
             //Lista
             List<string> fruits = new List<string>();
-            
+
 
             // Elemek hozzáadása a listához
             fruits.Add("Apple");
@@ -175,7 +175,7 @@ namespace Alapok
 
             // Lista elemének eltávolítása
             fruits.Remove("Banán");
-            
+
 
             // Lista frissített elemeinek kiírása
             Console.WriteLine("\nA lista frissítése után:");
@@ -188,16 +188,11 @@ namespace Alapok
             // Lista méretének kiírása
             Console.WriteLine($"\nA lista mérete: {fruits.Count}\n");
 
-           
-
-          
-
-
             //Tömbök
             string[] autok = { "Volvo", "Ford", "Mazda", "Mustang", "Audi", };
 
             Console.WriteLine($"Az autó: {autok[1]}\n");
-            
+
             Console.WriteLine($"Autók mennyisége: {autok.Length} \n");
 
             Array.Sort(autok);
@@ -325,6 +320,32 @@ namespace Alapok
                 Console.WriteLine("Egy váratlan hiba történt:");
                 Console.WriteLine(ex.Message);
             }
+
+            // Stringek
+            string szovegek = "Lorem Ipsum" + ",";  
+            Console.WriteLine(szovegek.ToUpper());                    
+            Console.WriteLine(szovegek.ToLower());                    
+            Console.WriteLine(szovegek.Length);                       
+            Console.WriteLine(szovegek.Replace('e', 'a'));            
+            Console.WriteLine(szovegek.Trim(','));
+
+            var reszletek = szovegek.Split(',');
+            foreach (var resz in reszletek)
+            {
+                Console.WriteLine(resz);
+            }
+
+
+            Console.WriteLine(szovegek.Contains("ha"));               
+            Console.WriteLine(szovegek.StartsWith("Lorem"));           
+            Console.WriteLine(szovegek.EndsWith(","));                 
+            Console.WriteLine(szovegek.IndexOf("rem"));                
+            Console.WriteLine(szovegek.Equals("Lorem Ipsum,"));        
+
+
+
+
         }
+
     }
 }
