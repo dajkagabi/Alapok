@@ -329,12 +329,15 @@ namespace Alapok
             Console.WriteLine(szovegek.Replace('e', 'a'));            
             Console.WriteLine(szovegek.Trim(','));
 
-            var reszletek = szovegek.Split(',');
+            Console.WriteLine(string.Join(", ", szovegek.Split(',')));
+            /*
+             var reszletek = szovegek.Split(',');
             foreach (var resz in reszletek)
             {
-                Console.WriteLine(resz);
+                 Console.WriteLine(resz);
             }
-
+             
+             */
 
             Console.WriteLine(szovegek.Contains("ha"));               
             Console.WriteLine(szovegek.StartsWith("Lorem"));           
